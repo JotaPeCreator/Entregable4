@@ -10,9 +10,7 @@
         //Primera parte
         let a=10;
         let b=5;
-        let operacion;
-        do{
-        let operacion= prompt("Ingrese la operacion (sumar, restar, multiplicar, o dividir, salir)");
+        let operacion= prompt("Ingrese la operacion (sumar, restar, multiplicar, o dividir)");
 
                 function realizarOperacion(num1,num2,operacion){
                 if(operacion=='sumar'){
@@ -36,8 +34,6 @@
         let resultado= realizarOperacion (a, b, operacion);
         document.write("El resultado de su ", operacion, " es: ", resultado);
         
-        }while(operacion!=='salir');
-        document.write("Saliste exitosamente");
 
 
     </script>
