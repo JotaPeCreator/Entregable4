@@ -29,13 +29,13 @@
                 }
                 }
         do {
-            let a = parseFloat(prompt("Ingrese el primer número"));
-            let b = parseFloat(prompt("Ingrese el segundo número"));
+            let num1 = parseFloat(prompt("Ingrese el primer número"));
+            let num2 = parseFloat(prompt("Ingrese el segundo número"));
             operacion = prompt("Ingrese la operación (sumar, restar, multiplicar, dividir o salir)");
 
         if (operacion !== 'salir') {
-            let resultado = realizarOperacion(a, b, operacion);
-            document.write("El resultado de su " + operacion + " es: " + resultado + "<br>");
+            let resultado = realizarOperacion(num1, num2, operacion);
+            document.write("El resultado de su " + operacion + " es: " + resultado);
         }
 
         }while (operacion !== 'salir');
