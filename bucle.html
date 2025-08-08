@@ -30,14 +30,14 @@
         do {
             let num1 = parseFloat(prompt("Ingrese el primer número"));
             let num2 = parseFloat(prompt("Ingrese el segundo número"));
-            operacion = prompt("Ingrese la operación (sumar, restar, multiplicar, dividir o salir)");
+            operacion = prompt("Ingrese la operación (sumar, restar, multiplicar, dividir, salir)");
 
-        if (operacion !== 'salir') {
+        if (operacion == 'salir') {
             let resultado = realizarOperacion(num1, num2, operacion);
             console.log("El resultado de su " + operacion + " es: " + resultado);
         }
 
-        }while (operacion  == 'salir');
+        }while (operacion  !== 'salir');
         console.log("El resultado de su " + operacion + " es: " + resultado);
         console.log("Saliste exitosamente");
         
