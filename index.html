@@ -8,13 +8,13 @@
 <body>
     <script>
         //Primera parte
-        let a=10;
-        let b=5;
+        let num1=10;
+        let num2=5;
         let operacion= prompt("Ingrese la operacion (sumar, restar, multiplicar, dividir)");
 
                 function realizarOperacion(num1,num2,operacion){
                 if(operacion=='sumar'){
-                    return a+b;
+                    return num1+num2;
                 }else if (operacion=='restar'){
                     return num1-num2;
                 }else if (operacion=='multiplicar'){
@@ -32,9 +32,7 @@
                     return "operacion no valida";
                 }
                 }
-
-        let resultado= realizarOperacion (a, b, operacion);
-        document.write("El resultado de su ", operacion, " es: ", resultado);
+        document.write("El resultado de su ", operacion, " es: ", realizarOperacion(num1, num2, operacion));
         
 
 
