@@ -7,8 +7,39 @@
 </head>
 <body>
     <script>
-        
+function realizarOperacion(num1, num2, operacion) {
+    if (operacion === 'sumar') {
+        return num1 + num2;
+    } else if (operacion === 'restar') {
+        return num1 - num2;
+    } else if (operacion === 'multiplicar') {
+        return num1 * num2;
+    } else if (operacion === 'dividir') {
+        if (num2 === 0) {
+            return "No se puede dividir entre cero";
+        } else {
+            return num1 / num2;
+        }
+    } else {
+        return "Operación no válida";
+    }
+}
 
+let num1 = 10;
+let num2 = 5;
+let operacion;
+
+do {
+    operacion = prompt("Ingrese la operación (sumar, restar, multiplicar, dividir) o escriba 'salir' para terminar");
+
+    if (operacion !== "salir") {
+        let resultado = realizarOperacion(num1, num2, operacion);
+        document.write(`El resultado de su operación "${operacion}" es: ${resultado}<br>`);
+    }
+
+} while (operacion !== "salir");
+
+document.write("👋 Gracias por usar el programa");
     </script>
 </body>
 </html>
