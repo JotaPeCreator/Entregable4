@@ -10,9 +10,9 @@
         //Primera parte
         let num1=10;
         let num2=5;
-        let operacion= prompt("Ingrese la operacion (sumar, restar, multiplicar, dividir)");
+         let operacion= prompt("Ingrese la operacion (sumar, restar, multiplicar, dividir)");
 
-                function realizarOperacion(num1,num2,operacion){
+            function realizarOperacion(num1,num2,operacion){
                 if(operacion=='sumar'){
                     return num1+num2;
                 }else if (operacion=='restar'){
@@ -20,24 +20,20 @@
                 }else if (operacion=='multiplicar'){
                     return num1*num2;
                 }else if (operacion == 'dividir') {
-                    //Para este if, tuve que pedir ayuda a Copilot
-                    // porque no nos ensenaron que dentro de un else if, 
-                    // se podia hacer otro if, else.
+                //Para este if, tuve que pedir ayuda a Copilot
+                // porque no nos ensenaron que dentro de un else if, 
+                // se podia hacer otro if, else.
                     if (num2 == 0) {
                         return "No se puede dividir entre cero";
-                    } else {
+                    }else{
                         return num1 / num2;
                     }
                 }else{
                     return "operacion no valida";
                 }
-                }
-
-        let resultado= realizarOperacion (num1, num2, operacion);
-        document.write("El resultado de su ", operacion, " es: ", resultado);
-        
-
-
+            }
+            let resultado= realizarOperacion (num1, num2, operacion);
+            document.write("El resultado de su ", operacion, " es: ", resultado);
     </script>
     
 </body>
