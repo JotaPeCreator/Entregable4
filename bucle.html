@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Calculadora</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
 </head>
 <body>
-<script>
-    function realizarOperacion(num1,num2,operacion){
-        if(operacion=='sumar'){
-            return num1+num2;
-        }else if (operacion=='restar'){
-            return num1-num2;
-        }else if (operacion=='multiplicar'){
-            return num1*num2;
-        }else if (operacion == 'dividir') {
-            if (num2 == 0) {
-                return "No se puede dividir entre cero";
-            }else{
-                return num1 / num2;
+    <script>
+        function realizarOperacion(num1, num2, operacion) {
+            if (operacion == 'sumar') {
+                return num1 + num2;
+            } else if (operacion == 'restar') {
+                return num1 - num2;
+            } else if (operacion == 'multiplicar') {
+                return num1 * num2;
+            } else if (operacion == 'dividir') {
+                if (num2 == 0) {
+                    return "No se puede dividir entre cero";
+                } else {
+                    return num1 / num2;
+                }
+            } else {
+                return "operacion no valida";
             }
-        }else{
-            return "operacion no valida";
         }
-    }
 
-    let operacion;
+        let operacion;
 
-    do {
-        operacion = prompt("Ingrese la operacion (sumar, restar, multiplicar, dividir) o 'salir' para terminar");
-        if (operacion === "salir") break;
+        do {
+            operacion = prompt("Ingrese la operacion (sumar, restar, multiplicar, dividir) o 'salir' para terminar");
 
-        let num1 = parseFloat(prompt("Ingrese el primer numero: "));
-        let num2 = parseFloat(prompt("Ingrese el segundo numero: "));
+            if (operacion === "salir") {
+                break;
+            }
 
-        let resultado = realizarOperacion(num1, num2, operacion);
+            let num1 = parseFloat(prompt("Ingrese el primer numero: "));
+            let num2 = parseFloat(prompt("Ingrese el segundo numero: "));
 
-        document.write("El resultado de su " + operacion + " es: " + resultado + "<br>");
-    } while (operacion !== "salir");
+            let resultado = realizarOperacion(num1, num2, operacion);
 
-    document.write("Saliste de la calculadora");
-</script>
+            document.write("El resultado de su " + operacion + " es: " + resultado);
+
+        } while (operacion !== "salir");
+
+        document.write("Saliste de la calculadora");
+    </script>
 </body>
 </html>
